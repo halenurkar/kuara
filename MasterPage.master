@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>KUARA</title>
+  <style type="text/css">
+      
+ .background{background-color:rgba(217, 202, 202, 0.29)}
+ .text0{top:0% ;left:11% ;position:absolute;color:rgba(100, 0, 0, 0.75); font:27px Elephant, Helvetica, Sans-seri;}
+ 
+  #menum ul {
+     top:0%; left:17%; position:absolute;
+    list-style:none;
+	}
+  #menum li {
+     
+    float:left; position:relative; width:150px; }
+ 
+  #menum ul li a{
+
+    /*background:rgba(100, 0, 0, 0.79);
+    border-color:rgba(100, 0, 0, 0.79);
+    border-style:groove;*/
+   
+    color:rgba(81, 79, 79, 0.91);
+    display:block;
+    font: 17px Century, Helvetica, Sans-seri;
+    margin:0%;
+    padding:2px 20px;
+   text-decoration:none;
+    line-height:30px;
+   text-align: center;
+  
+  }
+  #menum ul li a:hover {
+
+     
+    background-color:rgba(81, 79, 79, 0.25);  }
+  #menum li:hover ul { display:block;  text-align: center;}
+  .icon{  top:3%; left:70%; position:absolute;}
+
+  #menum2 ul{
+        top:20%; left:4%; position:absolute;
+    list-style:none;
+  }
+
+  menum2 li{ position:relative; width:300px;
+
+  }
+   #menum2 ul li a{
+       font: 17px Century, Helvetica, Sans-seri;
+      color:rgba(167, 165, 165, 0.91);
+       line-height:40px;
+   text-align: center;
+     text-decoration:none;
+   }
+
+    #menum2 ul li a:hover {
+
+     
+    background-color:rgba(100, 0, 0, 0.31);  color:rgba(100, 0, 0, 0.79); }
+
+      
+
+      .auto-style1 {
+          background-color:rgba(217, 202, 202, 0.29);
+          height: 48px;
+      }
+
+      
+
+ </style>       
+    <asp:ContentPlaceHolder id="head" runat="server">
+  
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+  
+    
+       <div id="menum" class="auto-style1">
+
+           <table>
+               <tr>
+                   <td>
+                <h1 class="text0"> KUARA</h1>      
+                   </td>
+               </tr>
+           </table>
+    
+<ul>
+          
+<li> <a href="master.aspx">   ANA SAYFA</a></li>
+<li><a href="profil.aspx">PROFİL</a></li>
+
+
+    <li><a href="#">BİLDİRİMLER</a></li>
+
+<li></li>
+
+
+    </ul>
+</div>
+   
+    <div id="menum2">
+        <ul>
+           <li><a href="#"> </a>
+    <ul>
+        <li><a href="resim.aspx">RESİM</a></li>
+        <li><a href="muzik.aspx"> MÜZİK</a></li>
+         <li><a href="magazin.aspx">MAGAZİN</a></li>
+        <li><a href="moda.aspx">MODA</a></li> 
+        <li><a href="spor.aspx">SPOR</a></li>
+         <li><a href="siyaset.aspx">SİYASET</a></li>
+         <li><a href="teknoloji.aspx">TEKNOLOJİ</a></li>
+       
+    </ul>
+    </li>
+</ul>
+    </div>
+    <form id="form1" runat="server">
+    <div>
+     <asp:Button ID="ButtonCikis" runat="server" Text="Çıkış" OnClick="ButtonCikis_Click" />
+      
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+
+        </asp:ContentPlaceHolder>
+        
+    </div>
+        
+    </form>
+    
+    
+</body>
+</html>
